@@ -1,100 +1,100 @@
 # NotchSplit
 
-**Herhangi bir pencereyi çentiğe (notch) sürükleyerek macOS'te ekranı bölün.**
+**Split your screen on macOS by dragging any window to the notch.**
 
-NotchSplit, MacBook'unuzun çentiğini bir pencere yöneticisine dönüştürür. Klavye kısayolu ezberlemek yok, küçük yeşil düğmelerin üzerinde beklemek yok: pencereyi tutun, ekranın üstüne, çentiğe götürün, bırakın.
+NotchSplit turns your MacBook's notch into a window manager. No keyboard shortcuts to memorize, no hovering over the little green button: grab a window, drag it up to the notch, and let go.
 
-Bu repo **kullanıma hazır uygulamayı** içerir. **Tamamen ücretsizdir** ve **kapalı kaynaktır** — kaynak kodu paylaşılmaz, yalnızca derlenmiş macOS çıktısı (`.dmg`) burada yayınlanır.
-
----
-
-## 📥 İndir
-
-**[NotchSplit-1.0.0.dmg](NotchSplit-1.0.0.dmg)** indir (448 KB)
-
-### Kurulum
-
-1. `.dmg` dosyasını açın, **NotchSplit**'i **Applications** klasörüne sürükleyin.
-2. Applications klasöründen NotchSplit'i açın.
-3. macOS *"Apple doğrulayamadı"* uyarısı gösterirse: **Bitti**'ye basın, ardından **Sistem Ayarları › Gizlilik ve Güvenlik** bölümünün en altında **Yine de Aç**'a tıklayın.
-   *(Bu uyarı, App Store dışı ve ücretsiz bir uygulama olduğu için çıkar. NotchSplit internete bağlanmaz, sürücü yüklemez; yalnızca pencere taşımak için Erişilebilirlik API'sini kullanır.)*
-4. Sorulduğunda **Erişilebilirlik** iznini verin: **Sistem Ayarları › Gizlilik ve Güvenlik › Erişilebilirlik**.
-5. Menü çubuğundaki çentik simgesine tıklayıp dilinizi seçin (35 dil arasından), sonra herhangi bir pencereyi çentiğe sürükleyin.
+This repository holds the **ready-to-run app**. It is **completely free** and **closed-source** — the source code is not shared; only the compiled macOS build (`.dmg`) is published here.
 
 ---
 
-## ✨ Nasıl çalışır
+## 📥 Download
 
-| Hareket | Sonuç |
+Download **[NotchSplit-1.0.0.dmg](NotchSplit-1.0.0.dmg)** (444 KB)
+
+### Install
+
+1. Open the `.dmg` and drag **NotchSplit** into your **Applications** folder.
+2. Launch NotchSplit from Applications.
+3. If macOS shows *"Apple could not verify…"*: click **Done**, then go to **System Settings › Privacy & Security** and click **Open Anyway** near the bottom.
+   *(This warning appears because the app is free and distributed outside the App Store. NotchSplit never connects to the internet and installs no drivers; it only uses the Accessibility API to move windows.)*
+4. Grant **Accessibility** permission when asked: **System Settings › Privacy & Security › Accessibility**.
+5. Click the notch icon in the menu bar to pick your language (35 available), then drag any window to the notch.
+
+---
+
+## ✨ How it works
+
+| Gesture | Result |
 | --- | --- |
-| Pencereyi çentiğe sürükleyip **bırakın** | Pencere **tam ekran** olur |
-| Pencereyi çentiğe sürükleyip **~1 saniye basılı tutun** | Çentiğin altında bir **yerleşim seçici** belirir |
-| Seçicideki bir yerleşimin üstüne gelip bırakın | Pencere o yerleşime oturur |
-| Çentikten uzaklaşın | Hiçbir şey olmaz, pencere normal hareket eder |
+| Drag a window to the notch | A **layout picker springs out of the notch instantly** |
+| Release **on the notch** | The window goes **full screen** |
+| Hover a layout in the picker, then release | The window snaps to that layout |
+| Drag away from the notch | Nothing happens — the window moves normally |
 
-**Yerleşimler:** Sol/Sağ yarı · Sol/Orta/Sağ üçte bir · Sol/Sağ üçte iki · Dört köşe çeyrek · Tam ekran · Ortala
+**Layouts:** Left/Right half · Left/Center/Right third · Left/Right two-thirds · Four-corner quarters · Full screen · Center
 
 ---
 
-## 📊 Kıyaslayın — NotchSplit vs. diğer macOS pencere yöneticileri
+## 📊 Compare — NotchSplit vs. other macOS window managers
 
-> Aşağıdaki tabloda NotchSplit, macOS için en bilinen 7 pencere yöneticisiyle karşılaştırılmıştır. **Rakiplerin isimleri kasıtlı olarak gizlenmiştir** (Rakip A–G) — amaç marka tartışması değil, çıplak rakamlarla kıyas. **Kalın** hücreler NotchSplit'in önde olduğu yerlerdir. Rakip verileri her uygulamanın kendi resmi sitesinden, GitHub deposundan ve Mac App Store kayıtlarından alınmıştır (2026-11-10); güvenilir kamuya açık rakam bulunamayan hücreler "—" ile gösterilir (tahmin yok).
+> In the table below, NotchSplit is compared against 7 of the best-known macOS window managers. **Competitor names are hidden on purpose** (Competitor A–G) — the point isn't a brand debate, it's a comparison on the raw numbers. **Bold** cells are where NotchSplit leads. Competitor data was collected from each app's own official site, GitHub repository, and Mac App Store listing (2026-11-10); cells with no reliable public figure are shown as "—" (no guessing).
 
-| | **NotchSplit** | Rakip A | Rakip B | Rakip C | Rakip D | Rakip E | Rakip F | Rakip G |
+| | **NotchSplit** | Competitor A | Competitor B | Competitor C | Competitor D | Competitor E | Competitor F | Competitor G |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Fiyat | **Ücretsiz** | Ücretsiz | Ücretsiz | $1.99 | $4.99 | $6.99 | $9.99 | $13.99 |
-| İndirme boyutu | **448 KB** | 4.96 MB | 24 MB | 3.3 MB | 3.2 MB | 5.2 MB | — | 1.3 MB |
-| Boşta RAM | **12 MB** | ~14 MB | — | — | — | — | — | — |
-| Dil sayısı | **35** | 33 | 14 | 9 | 1 | 1 | — | 1 |
-| Çentik ile tetikleme | **✅ Evet** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Sürüklerken yerleşim seçici | **✅ Evet** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Price | **Free** | Free | Free | $1.99 | $4.99 | $6.99 | $9.99 | $13.99 |
+| Download size | **444 KB** | 4.96 MB | 24 MB | 3.3 MB | 3.2 MB | 5.2 MB | — | 1.3 MB |
+| Idle RAM | **12 MB** | ~14 MB | — | — | — | — | — | — |
+| Languages | **35** | 33 | 14 | 9 | 1 | 1 | — | 1 |
+| Notch trigger | **✅ Yes** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Layout picker while dragging | **✅ Yes** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
-**NotchSplit'in öne çıktığı noktalar:**
-- 🪶 **En küçük indirme** — 448 KB; en yakın rakibin ~1/7'si, bazılarının ~1/50'si.
-- 🧠 **Ölçülmüş düşük RAM** — boşta 12 MB, boşta CPU %0.0 (bu Mac'te `footprint`/`top` ile ölçüldü). Rakiplerin çoğu kamuya açık bir rakam yayınlamıyor.
-- 🌍 **35 dil** — test edilen tüm ücretli rakiplerden fazla; ücretsiz rakiplerle aynı ligde.
-- 🎯 **Çentik ile tetikleme + sürüklerken yerleşim seçici** — kıyaslanan uygulamaların hiçbirinde yok; NotchSplit'e özgü.
-- 💸 **Ücretsiz** — ücretli rakipler $1.99–$13.99 arası.
+**Where NotchSplit stands out:**
+- 🪶 **Smallest download** — 444 KB; about 1/7 the size of the nearest competitor, ~1/50 of some.
+- 🧠 **Measured low RAM** — 12 MB idle, 0.0% idle CPU (measured on this Mac with `footprint`/`top`). Most competitors publish no public figure.
+- 🌍 **35 languages** — more than every paid competitor tested; on par with the free ones.
+- 🎯 **Notch trigger + drag-time layout picker** — none of the compared apps have this; it's unique to NotchSplit.
+- 💸 **Free** — paid competitors run $1.99–$13.99.
 
-<sub>Not: "Boşta RAM" hücrelerindeki "—", o uygulama için güvenilir ve kamuya açık bir ölçüm bulunamadığı anlamına gelir; düşük performans değil, yayınlanmış veri eksikliğidir.</sub>
+<sub>Note: a "—" in the "Idle RAM" cells means no reliable, public measurement was found for that app; it reflects missing published data, not poor performance.</sub>
 
 ---
 
-## 🪶 Performans (ölçülmüş)
+## 🪶 Performance (measured)
 
-| Metrik | NotchSplit |
+| Metric | NotchSplit |
 | --- | --- |
-| RAM (boşta) | **12 MB** |
-| CPU (boşta) | **%0.0** (0 idle wakeup) |
-| CPU (sürüklerken) | ~%0.3 |
-| Uygulama boyutu (.app, universal) | **820 KB** |
-| Bağımlılık | Yok (saf AppKit; Electron, web view, 3. parti kütüphane yok) |
+| RAM (idle) | **12 MB** |
+| CPU (idle) | **0.0%** (0 idle wakeups) |
+| CPU (while dragging) | ~0.3% |
+| App size (.app, universal) | **804 KB** |
+| Dependencies | None (pure AppKit; no Electron, no web view, no third-party libraries) |
 
-Nasıl: %100 native Swift + AppKit, timer/polling yok (yalnızca fare sürükleme olaylarını dinler), menü çubuğu uygulaması (Dock ikonu yok), seçici panel yalnızca gerektiğinde oluşturulup hemen serbest bırakılır.
+How: 100% native Swift + AppKit, no timers or polling (it only listens for mouse-drag events), menu-bar app (no Dock icon), and the picker panel is created only when needed and released immediately after.
 
 ---
 
-## 🌍 Diller (35)
+## 🌍 Languages (35)
 
 English · Türkçe · Deutsch · Français · Español · Italiano · Português · Nederlands · Русский · Українська · Polski · Svenska · 简体中文 · 繁體中文 · 日本語 · 한국어 · العربية · हिन्दी · Bahasa Indonesia · Tiếng Việt · Čeština · Dansk · Suomi · Ελληνικά · עברית · Magyar · Norsk bokmål · Română · Slovenčina · ไทย · Català · Hrvatski · فارسی · Bahasa Melayu · Lietuvių
 
-Sistem diline otomatik uyar; uygulama içinden de elle seçilebilir. Sağdan-sola diller (Arapça, İbranice, Farsça) tam desteklenir.
+Follows your system language automatically; can also be picked by hand inside the app. Right-to-left languages (Arabic, Hebrew, Persian) are fully supported.
 
 ---
 
-## 💻 Gereksinimler
+## 💻 Requirements
 
-- macOS 13 Ventura veya üstü
-- Çentikli bir MacBook (çentiksiz Mac'lerde ekranın üst orta kenarı aynı şekilde çalışır)
+- macOS 13 Ventura or later
+- A MacBook with a notch (on Macs without one, the top-center of the screen works the same way)
 
-## 🔒 Gizlilik ve güvenlik
+## 🔒 Privacy & security
 
-NotchSplit internete hiç bağlanmaz, veri toplamaz, analitik göndermez. Yalnızca pencereleri taşımak/boyutlandırmak için macOS'un Erişilebilirlik API'sini kullanır. Uygulama hardened runtime ile imzalıdır; sembolleri ve hata ayıklama bilgileri kaldırılmıştır.
+NotchSplit never connects to the internet, collects no data, and sends no analytics. It only uses macOS's Accessibility API to move and resize windows. The app is signed with the hardened runtime; symbols and debug information are stripped.
 
-## 📄 Lisans
+## 📄 License
 
-Kullanımı tamamen ücretsizdir. Kaynak kodu kapalıdır ve paylaşılmaz; uygulamanın izinsiz dağıtılması, değiştirilmesi veya tersine mühendislik yapılması yasaktır.
+Free to use. The source code is closed and not shared; redistributing, modifying, or reverse-engineering the app is not permitted.
 
 ---
 
-<sub>Sürüm 1.0.0 · SHA-256: `d721448771fe549745a499713dfb2132b28fabccd724eb5c6a09120e6d26c1ab`</sub>
+<sub>Version 1.0.0 · SHA-256: `93bc1f999da8b9e6e1bacebb1f7c53790107fdcd96d9f616adbf15fb8c4cee55`</sub>
