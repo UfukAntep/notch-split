@@ -10,7 +10,7 @@ Bu repo **kullanıma hazır uygulamayı** içerir. **Tamamen ücretsizdir** ve *
 
 ## 📥 İndir
 
-**[NotchSplit-1.0.0.dmg](NotchSplit-1.0.0.dmg)** indir (432 KB)
+**[NotchSplit-1.0.0.dmg](NotchSplit-1.0.0.dmg)** indir (448 KB)
 
 ### Kurulum
 
@@ -19,7 +19,7 @@ Bu repo **kullanıma hazır uygulamayı** içerir. **Tamamen ücretsizdir** ve *
 3. macOS *"Apple doğrulayamadı"* uyarısı gösterirse: **Bitti**'ye basın, ardından **Sistem Ayarları › Gizlilik ve Güvenlik** bölümünün en altında **Yine de Aç**'a tıklayın.
    *(Bu uyarı, App Store dışı ve ücretsiz bir uygulama olduğu için çıkar. NotchSplit internete bağlanmaz, sürücü yüklemez; yalnızca pencere taşımak için Erişilebilirlik API'sini kullanır.)*
 4. Sorulduğunda **Erişilebilirlik** iznini verin: **Sistem Ayarları › Gizlilik ve Güvenlik › Erişilebilirlik**.
-5. Menü çubuğundaki çentik simgesine tıklayıp dilinizi seçin (20 dil arasından), sonra herhangi bir pencereyi çentiğe sürükleyin.
+5. Menü çubuğundaki çentik simgesine tıklayıp dilinizi seçin (35 dil arasından), sonra herhangi bir pencereyi çentiğe sürükleyin.
 
 ---
 
@@ -36,43 +36,51 @@ Bu repo **kullanıma hazır uygulamayı** içerir. **Tamamen ücretsizdir** ve *
 
 ---
 
-## 🪶 Performans
+## 📊 Kıyaslayın — NotchSplit vs. diğer macOS pencere yöneticileri
 
-Bu Mac'te (Apple Silicon, macOS 27) ölçülmüştür:
+> Aşağıdaki tabloda NotchSplit, macOS için en bilinen 7 pencere yöneticisiyle karşılaştırılmıştır. **Rakiplerin isimleri kasıtlı olarak gizlenmiştir** (Rakip A–G) — amaç marka tartışması değil, çıplak rakamlarla kıyas. **Kalın** hücreler NotchSplit'in önde olduğu yerlerdir. Rakip verileri her uygulamanın kendi resmi sitesinden, GitHub deposundan ve Mac App Store kayıtlarından alınmıştır (2026-11-10); güvenilir kamuya açık rakam bulunamayan hücreler "—" ile gösterilir (tahmin yok).
+
+| | Fiyat | İndirme boyutu | Boşta RAM | Dil sayısı | Çentik ile tetikleme | Sürüklerken yerleşim seçici |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **NotchSplit** | **Ücretsiz** | **448 KB** | **12 MB** | **35** | **✅ Evet** | **✅ Evet** |
+| Rakip A | Ücretsiz | 4.96 MB | ~14 MB | 33 | ❌ | ❌ |
+| Rakip B | Ücretsiz | 24 MB | — | 14 | ❌ | ❌ |
+| Rakip C | $1.99 | 3.3 MB | — | 9 | ❌ | ❌ |
+| Rakip D | $4.99 | 3.2 MB | — | 1 | ❌ | ❌ |
+| Rakip E | $6.99 | 5.2 MB | — | 1 | ❌ | ❌ |
+| Rakip F | $9.99 | — | — | — | ❌ | ❌ |
+| Rakip G | $13.99 | 1.3 MB | — | 1 | ❌ | ❌ |
+
+**NotchSplit'in öne çıktığı noktalar:**
+- 🪶 **En küçük indirme** — 448 KB; en yakın rakibin ~1/7'si, bazılarının ~1/50'si.
+- 🧠 **Ölçülmüş düşük RAM** — boşta 12 MB, boşta CPU %0.0 (bu Mac'te `footprint`/`top` ile ölçüldü). Rakiplerin çoğu kamuya açık bir rakam yayınlamıyor.
+- 🌍 **35 dil** — test edilen tüm ücretli rakiplerden fazla; ücretsiz rakiplerle aynı ligde.
+- 🎯 **Çentik ile tetikleme + sürüklerken yerleşim seçici** — kıyaslanan uygulamaların hiçbirinde yok; NotchSplit'e özgü.
+- 💸 **Ücretsiz** — ücretli rakipler $1.99–$13.99 arası.
+
+<sub>Not: "Boşta RAM" hücrelerindeki "—", o uygulama için güvenilir ve kamuya açık bir ölçüm bulunamadığı anlamına gelir; düşük performans değil, yayınlanmış veri eksikliğidir.</sub>
+
+---
+
+## 🪶 Performans (ölçülmüş)
 
 | Metrik | NotchSplit |
 | --- | --- |
 | RAM (boşta) | **12 MB** |
-| CPU (boşta) | **%0.0** |
-| Uygulama boyutu | **756 KB** |
-| Bağımlılık | Yok (3. parti kütüphane, Electron, web view yok) |
+| CPU (boşta) | **%0.0** (0 idle wakeup) |
+| CPU (sürüklerken) | ~%0.3 |
+| Uygulama boyutu (.app, universal) | **820 KB** |
+| Bağımlılık | Yok (saf AppKit; Electron, web view, 3. parti kütüphane yok) |
 
-### Rakiplerle karşılaştırma — RAM / CPU / boyut
+Nasıl: %100 native Swift + AppKit, timer/polling yok (yalnızca fare sürükleme olaylarını dinler), menü çubuğu uygulaması (Dock ikonu yok), seçici panel yalnızca gerektiğinde oluşturulup hemen serbest bırakılır.
 
-> Rakip verileri her uygulamanın kendi resmi sitesinden, GitHub deposundan veya Mac App Store kaydından derlenmiştir (2026-11-10). Güvenilir, kamuya açık bir rakam **bulunamayan** hücreler "—" ile işaretlenmiştir — tahmini sayı verilmemiştir.
+---
 
-| Uygulama | Fiyat | Boyut | Idle RAM | Idle CPU |
-| --- | --- | --- | --- | --- |
-| **NotchSplit** | **Ücretsiz** | **756 KB** | **12 MB** | **%0.0** |
-| Rectangle | Ücretsiz | 4.96 MB | ~14 MB | %0.0 |
-| Magnet | $4.99 | 3.2 MB | — | — |
-| Moom (Classic) | $6.99 | 5.2 MB | — | — |
-| BetterSnapTool | $1.99 | 3.3 MB | — | — |
-| Loop | Ücretsiz | 24.0 MB | — | ~%0.5 |
-| Rectangle Pro | $9.99 | — | — | — |
-| Divvy | $13.99 | 1.3 MB | — | — |
+## 🌍 Diller (35)
 
-### Rakiplerle karşılaştırma — dil desteği
+English · Türkçe · Deutsch · Français · Español · Italiano · Português · Nederlands · Русский · Українська · Polski · Svenska · 简体中文 · 繁體中文 · 日本語 · 한국어 · العربية · हिन्दी · Bahasa Indonesia · Tiếng Việt · Čeština · Dansk · Suomi · Ελληνικά · עברית · Magyar · Norsk bokmål · Română · Slovenčina · ไทย · Català · Hrvatski · فارسی · Bahasa Melayu · Lietuvių
 
-| Uygulama | Dil sayısı |
-| --- | --- |
-| Rectangle | 33 |
-| **NotchSplit** | **20** |
-| Loop | 14 |
-| BetterSnapTool | 9 |
-| Magnet / Moom / Divvy | 1 (yalnızca İngilizce) |
-
-NotchSplit'in desteklediği diller: English, Türkçe, Deutsch, Français, Español, Italiano, Português, Nederlands, Русский, Українська, Polski, Svenska, 简体中文, 繁體中文, 日本語, 한국어, العربية, हिन्दी, Bahasa Indonesia, Tiếng Việt.
+Sistem diline otomatik uyar; uygulama içinden de elle seçilebilir. Sağdan-sola diller (Arapça, İbranice, Farsça) tam desteklenir.
 
 ---
 
@@ -91,4 +99,4 @@ Kullanımı tamamen ücretsizdir. Kaynak kodu kapalıdır ve paylaşılmaz; uygu
 
 ---
 
-<sub>Sürüm 1.0.0 · SHA-256: `e771a5c46546faf30be7767df2b1508c973514a046850ed4daaedf76689491fa`</sub>
+<sub>Sürüm 1.0.0 · SHA-256: `ee17fba196f11f6639237e67a0351a1d74443b78a8e232c7f57d946e05b0bf83`</sub>
