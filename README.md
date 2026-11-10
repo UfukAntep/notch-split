@@ -97,4 +97,4 @@ Free to use. The source code is closed and not shared; redistributing, modifying
 
 ---
 
-<sub>Version 1.0.0 · SHA-256: `93bc1f999da8b9e6e1bacebb1f7c53790107fdcd96d9f616adbf15fb8c4cee55`</sub>
+<sub>Version 1.0.0 · SHA-256: `1077234fcdc9977cd40ea036aec73dc32dd16e262bf5190aeddba78cd74f7978`</sub>
