@@ -40,16 +40,14 @@ Bu repo **kullanıma hazır uygulamayı** içerir. **Tamamen ücretsizdir** ve *
 
 > Aşağıdaki tabloda NotchSplit, macOS için en bilinen 7 pencere yöneticisiyle karşılaştırılmıştır. **Rakiplerin isimleri kasıtlı olarak gizlenmiştir** (Rakip A–G) — amaç marka tartışması değil, çıplak rakamlarla kıyas. **Kalın** hücreler NotchSplit'in önde olduğu yerlerdir. Rakip verileri her uygulamanın kendi resmi sitesinden, GitHub deposundan ve Mac App Store kayıtlarından alınmıştır (2026-11-10); güvenilir kamuya açık rakam bulunamayan hücreler "—" ile gösterilir (tahmin yok).
 
-| | Fiyat | İndirme boyutu | Boşta RAM | Dil sayısı | Çentik ile tetikleme | Sürüklerken yerleşim seçici |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **NotchSplit** | **Ücretsiz** | **448 KB** | **12 MB** | **35** | **✅ Evet** | **✅ Evet** |
-| Rakip A | Ücretsiz | 4.96 MB | ~14 MB | 33 | ❌ | ❌ |
-| Rakip B | Ücretsiz | 24 MB | — | 14 | ❌ | ❌ |
-| Rakip C | $1.99 | 3.3 MB | — | 9 | ❌ | ❌ |
-| Rakip D | $4.99 | 3.2 MB | — | 1 | ❌ | ❌ |
-| Rakip E | $6.99 | 5.2 MB | — | 1 | ❌ | ❌ |
-| Rakip F | $9.99 | — | — | — | ❌ | ❌ |
-| Rakip G | $13.99 | 1.3 MB | — | 1 | ❌ | ❌ |
+| | **NotchSplit** | Rakip A | Rakip B | Rakip C | Rakip D | Rakip E | Rakip F | Rakip G |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Fiyat | **Ücretsiz** | Ücretsiz | Ücretsiz | $1.99 | $4.99 | $6.99 | $9.99 | $13.99 |
+| İndirme boyutu | **448 KB** | 4.96 MB | 24 MB | 3.3 MB | 3.2 MB | 5.2 MB | — | 1.3 MB |
+| Boşta RAM | **12 MB** | ~14 MB | — | — | — | — | — | — |
+| Dil sayısı | **35** | 33 | 14 | 9 | 1 | 1 | — | 1 |
+| Çentik ile tetikleme | **✅ Evet** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Sürüklerken yerleşim seçici | **✅ Evet** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 **NotchSplit'in öne çıktığı noktalar:**
 - 🪶 **En küçük indirme** — 448 KB; en yakın rakibin ~1/7'si, bazılarının ~1/50'si.
