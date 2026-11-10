@@ -10,7 +10,7 @@ This repository holds the **ready-to-run app**. It is **completely free** and **
 
 ## 📥 Download
 
-Download **[NotchSplit-1.0.0.dmg](NotchSplit-1.0.0.dmg)** (444 KB)
+Download **[NotchSplit-1.0.0.dmg](NotchSplit-1.0.0.dmg)** (452 KB)
 
 ### Install
 
@@ -43,14 +43,14 @@ Download **[NotchSplit-1.0.0.dmg](NotchSplit-1.0.0.dmg)** (444 KB)
 | | **NotchSplit** | Competitor A | Competitor B | Competitor C | Competitor D | Competitor E | Competitor F | Competitor G |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Price | **Free** | Free | Free | $1.99 | $4.99 | $6.99 | $9.99 | $13.99 |
-| Download size | **444 KB** | 4.96 MB | 24 MB | 3.3 MB | 3.2 MB | 5.2 MB | — | 1.3 MB |
+| Download size | **452 KB** | 4.96 MB | 24 MB | 3.3 MB | 3.2 MB | 5.2 MB | — | 1.3 MB |
 | Idle RAM | **12 MB** | ~14 MB | — | — | — | — | — | — |
 | Languages | **35** | 33 | 14 | 9 | 1 | 1 | — | 1 |
 | Notch trigger | **✅ Yes** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Layout picker while dragging | **✅ Yes** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 **Where NotchSplit stands out:**
-- 🪶 **Smallest download** — 444 KB; about 1/7 the size of the nearest competitor, ~1/50 of some.
+- 🪶 **Smallest download** — 452 KB; about 1/7 the size of the nearest competitor, ~1/50 of some.
 - 🧠 **Measured low RAM** — 12 MB idle, 0.0% idle CPU (measured on this Mac with `footprint`/`top`). Most competitors publish no public figure.
 - 🌍 **35 languages** — more than every paid competitor tested; on par with the free ones.
 - 🎯 **Notch trigger + drag-time layout picker** — none of the compared apps have this; it's unique to NotchSplit.
@@ -67,7 +67,7 @@ Download **[NotchSplit-1.0.0.dmg](NotchSplit-1.0.0.dmg)** (444 KB)
 | RAM (idle) | **12 MB** |
 | CPU (idle) | **0.0%** (0 idle wakeups) |
 | CPU (while dragging) | ~0.3% |
-| App size (.app, universal) | **804 KB** |
+| App size (.app, universal) | **824 KB** |
 | Dependencies | None (pure AppKit; no Electron, no web view, no third-party libraries) |
 
 How: 100% native Swift + AppKit, no timers or polling (it only listens for mouse-drag events), menu-bar app (no Dock icon), and the picker panel is created only when needed and released immediately after.
@@ -97,4 +97,4 @@ Free to use. The source code is closed and not shared; redistributing, modifying
 
 ---
 
-<sub>Version 1.0.0 · SHA-256: `1077234fcdc9977cd40ea036aec73dc32dd16e262bf5190aeddba78cd74f7978`</sub>
+<sub>Version 1.0.0 · SHA-256: `9552708665bdb3f037a05d380c80dd706c90da88e26f3988c7273bc43d8c0760`</sub>
