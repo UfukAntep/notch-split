@@ -97,4 +97,4 @@ Kullanımı tamamen ücretsizdir. Kaynak kodu kapalıdır ve paylaşılmaz; uygu
 
 ---
 
-<sub>Sürüm 1.0.0 · SHA-256: `ee17fba196f11f6639237e67a0351a1d74443b78a8e232c7f57d946e05b0bf83`</sub>
+<sub>Sürüm 1.0.0 · SHA-256: `d721448771fe549745a499713dfb2132b28fabccd724eb5c6a09120e6d26c1ab`</sub>
